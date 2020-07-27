@@ -45,7 +45,7 @@ class GFSignature extends GFAddOn {
 
 		if ( $this->is_gravityforms_supported() && class_exists( 'GF_Field' ) ) {
 			require_once( 'includes/class-gf-field-signature.php' );
-
+			$this->display_signature(''); // fix where signature do not show at backend	
 			add_action( 'parse_request', array( $this, 'display_signature' ) );
 		}
 	}
